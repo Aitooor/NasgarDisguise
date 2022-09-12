@@ -1,4 +1,4 @@
 mongo:
-  uri: "mongodb+srv://admin:lufupa8908@cluster0.9vqgx.mongodb.net/admin"
+  uri: ""
   database: "disguise"
   collection: "profiles"
