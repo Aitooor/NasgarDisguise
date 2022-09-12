@@ -1,0 +1,4 @@
+name: NasgarDisguise
+version: '${project.version}'
+main: online.nasgar.disguise.DisguiseMain
+authors: [ Sakio ]
