@@ -33,6 +33,7 @@ public class ConnectionListener implements Listener {
     @EventHandler
     public void onQuitPlayer(PlayerQuitEvent event){
         Player player = event.getPlayer();
+
         user = new User(player.getUniqueId(),
                 player.getName(),
                 null);
