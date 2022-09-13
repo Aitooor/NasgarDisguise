@@ -20,13 +20,11 @@ public class User {
     private final UUID uuid;
     private String name;
     private String newName;
-    private String skin;
     private String prefix;
 
-    public User(UUID uuid, String name, String skin, String prefix) {
+    public User(UUID uuid, String name, String prefix) {
         this.uuid = uuid;
         this.name = name;
-        this.skin = skin;
         this.prefix = prefix;
 
         this.load();
@@ -43,7 +41,6 @@ public class User {
 
         name = document.getString("name");
         newName = document.getString("new_name");
-        skin = document.getString("skin");
         prefix = document.getString("prefix");
     }
 
@@ -52,7 +49,6 @@ public class User {
 
         document.put("name", name);
         document.put("new_name", newName);
-        document.put("skin", skin);
         document.put("prefix", prefix);
 
         Bson filter = Filters.eq("_id", this.uuid);
@@ -75,10 +71,6 @@ public class User {
 
     public String getNewName() {
         return newName;
-    }
-
-    public String getSkin() {
-        return skin;
     }
 
     public String getPrefix() {

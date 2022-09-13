@@ -27,8 +27,7 @@ public class ConnectionListener implements Listener {
 
         user = new User(player.getUniqueId(),
                 player.getName(),
-                "",
-                "%default_nasgar%");
+                null);
     }
 
     @EventHandler
@@ -36,8 +35,7 @@ public class ConnectionListener implements Listener {
         Player player = event.getPlayer();
         user = new User(player.getUniqueId(),
                 player.getName(),
-                "",
-                "%default_nasgar%");
+                null);
 
         User.getPlayer(player).save();
     }
