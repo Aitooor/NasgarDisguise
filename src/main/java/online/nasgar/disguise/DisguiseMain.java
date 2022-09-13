@@ -8,6 +8,7 @@ public final class DisguiseMain extends JavaPlugin {
 
     @Override
     public void onEnable() {
+
         FileMatcher matcher = new FileMatcher(this);
         DisguiseModule disguiseModule = new DisguiseModule(this, matcher);
 
