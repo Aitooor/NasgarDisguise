@@ -13,9 +13,9 @@ import java.util.HashMap;
 import java.util.UUID;
 
 public class User {
-    private DisguiseMain plugin = new DisguiseMain();
-    private FileMatcher matcher = new FileMatcher(plugin);
-    private MongoConnection mongoConnection = new MongoConnection(plugin, matcher);
+    private final DisguiseMain plugin = new DisguiseMain();
+    private final FileMatcher matcher = new FileMatcher(plugin);
+    private final MongoConnection mongoConnection = new MongoConnection(plugin, matcher);
     private static final HashMap<UUID, User> user = new HashMap<>();
     private final UUID uuid;
     private String name;
