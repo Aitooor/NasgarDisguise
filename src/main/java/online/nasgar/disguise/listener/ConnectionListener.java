@@ -23,7 +23,8 @@ public class ConnectionListener implements Listener {
 
         user = new User(player.getUniqueId(),
                 player.getName(),
-                "");
+                "",
+                plugin);
     }
 
 
@@ -33,7 +34,8 @@ public class ConnectionListener implements Listener {
 
         user = new User(player.getUniqueId(),
                 player.getName(),
-                "");
+                "",
+                plugin);
 
         System.out.println("El player se echa de puta madre socio ");
         user.getPlayer(player).save();
