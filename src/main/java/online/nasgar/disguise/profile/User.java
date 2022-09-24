@@ -13,19 +13,23 @@ import java.util.HashMap;
 import java.util.UUID;
 
 public class User {
-    private final DisguiseMain plugin = new DisguiseMain();
-    private final FileMatcher matcher = new FileMatcher(plugin);
-    private final MongoConnection mongoConnection = new MongoConnection(plugin, matcher);
+    private final DisguiseMain plugin;
+    private final FileMatcher matcher;
+    private final MongoConnection mongoConnection;
     private static final HashMap<UUID, User> user = new HashMap<>();
     private final UUID uuid;
     private String name;
     private String newName;
     private String prefix;
 
-    public User(UUID uuid, String name, String prefix) {
+    public User(UUID uuid, String name, String prefix, DisguiseMain plugin) {
         this.uuid = uuid;
         this.name = name;
         this.prefix = prefix;
+
+        this.plugin = plugin;
+        this.matcher = new FileMatcher(plugin);
+        this.mongoConnection = new MongoConnection(plugin, matcher);
 
         this.load();
 

@@ -1,5 +1,7 @@
 package online.nasgar.disguise.command;
 
+import online.nasgar.disguise.DisguiseMain;
+import online.nasgar.disguise.menu.impl.DisguiseMainMenu;
 import online.nasgar.disguise.modules.submodule.LangModule;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -24,7 +26,7 @@ public class DisguiseCommand implements CommandExecutor {
 
         Player player = (Player) sender;
 
-        //open disguise main menu
+        new DisguiseMainMenu(player).open(player);
 
         return false;
     }
