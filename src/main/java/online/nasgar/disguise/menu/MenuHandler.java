@@ -1,5 +1,6 @@
 package online.nasgar.disguise.menu;
 
+import org.bukkit.Material;
 import org.bukkit.event.inventory.InventoryDragEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.InventoryView;
@@ -19,5 +20,13 @@ public class MenuHandler {
             break;
         }
         return result;
+    }
+
+    public static void fillInventory(Inventory inv) {
+        for (int i = 0; i < inv.getSize(); i++) {
+            if (inv.getItem(i) == null || inv.getItem(i).getType().equals(Material.AIR)) {
+//                inv.setItem(i, new ItemMaker(Material.GRAY_STAINED_GLASS).setTitle("").build());
+            }
+        }
     }
 }
